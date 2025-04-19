@@ -12,8 +12,23 @@ The ultimate aim was to leverage the predictive capability of machine learning m
 
 
 ## Lessons Learned 
+As this was my first dive into ML and creating an end-to-end pipeline, a LOT was learned along the way. Especially as getting proper access to the entire MIMIC-III dataset required learning PostGreSQL and understanding how to do SQL queries to first select my dataset. 
+The most important lession was that doing the front-end work even though it may take a while is entirely worth it. This means having a proper research question, feature selection/engineering, and understanding what it is you're really trying to do at the end of the project is essential to lay out at the start. As this was an evloving project, changes in research questions and more debate/discussion about specific features made the data extraction repetitive (which wasn't a bad thing, just time consuming), although I do recognize that it is the nature of solutions to evolve as you learn more about potential solutions. Sometimes solutions evolve and you have to pivot as you go.
 
-## Data Pipeline, Cohort Selection & Feature Table 
+Had I more time and space (in this case I'm referring to literal disk space) I would have loved to do this same analysis on a much (MUCH) bigger sample of data, this demo really is a short snippet of what really should be analyzed and althought I have a decent training set for the purposes to showcase a ML pipeline, for actual understanding and production, a bigger dataset should be used. 
+
+### Data Pipeline, Cohort Selection & Feature Table 
+The following figures show the data pipeline, cohort selection, and feature table with descriptions that were used in the project. 
+
+#### Pipeline 
+![Alt text]()
+
+#### Cohort Selection
+![Alt text]()
+
+#### Feature Table 
+![Alt text]()
+
 
 ## Highlights 
 
