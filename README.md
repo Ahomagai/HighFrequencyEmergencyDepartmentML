@@ -21,17 +21,43 @@ Had I more time and space (in this case I'm referring to literal disk space) I w
 The following figures show the data pipeline, cohort selection, and feature table with descriptions that were used in the project. 
 
 #### Pipeline 
-![Alt text]()
+![Alt text](https://github.com/Ahomagai/HighFrequencyEmergencyDepartmentML/blob/main/img/Pipeline.png)
 
 #### Cohort Selection
-![Alt text]()
+![Alt text](https://github.com/Ahomagai/HighFrequencyEmergencyDepartmentML/blob/main/img/Cohort_Selection_Schema.png)
 
 #### Feature Table 
-![Alt text]()
+![Alt text](https://github.com/Ahomagai/HighFrequencyEmergencyDepartmentML/blob/main/img/Feature%20Table.PNG)
+
 
 
 ## Highlights 
+#### Initial XGBOOST Model Performance without hyperparameter optimization
 
+With an mean ROC of 0.72, it's unsurprising that the model has relatively poor performance, especially for the main variables of precision, recall, and F1 Score. 
+![Alt text](https://github.com/Ahomagai/HighFrequencyEmergencyDepartmentML/blob/main/img/initial_ROC.png)
+
+              precision    recall  f1-score   support
+
+           0       0.90      0.95      0.92     10658
+           1       0.32      0.19      0.24      1409
+
+    accuracy                           0.86     12067
+   macro avg       0.61      0.57      0.58     12067
+weighted avg       0.83      0.86      0.84     12067
+
+
+
+
+#### XGBOOST Model Performance with manual grid search 
+![Alt text](https://github.com/Ahomagai/HighFrequencyEmergencyDepartmentML/blob/main/img/ROC.png)
+
+#### Feature Importance of Manual Grid Search XGBOOST model 
+![Alt text](https://github.com/Ahomagai/HighFrequencyEmergencyDepartmentML/blob/main/img/Feature_importance.png)
+
+
+
+#### More highlights to come as I finalize them 
 
 
 ### References 
