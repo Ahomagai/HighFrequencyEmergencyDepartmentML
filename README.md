@@ -34,17 +34,22 @@ The following figures show the data pipeline, cohort selection, and feature tabl
 ## Highlights 
 #### Initial XGBOOST Model Performance without hyperparameter optimization
 
-With an mean ROC of 0.72, it's unsurprising that the model has relatively poor performance, especially for the main variables of precision, recall, and F1 Score. 
+<p> With an mean ROC of 0.72, it's unsurprising that the model has relatively poor performance, especially for the main variables of precision, recall, and F1 Score. </p>
+
+<b></br>
+
 ![Alt text](https://github.com/Ahomagai/HighFrequencyEmergencyDepartmentML/blob/main/img/initial_ROC.png)
 
-              precision    recall  f1-score   support
+<p> The classification report for unoptimized XGBOOST model is as follows: </p>
 
-           0       0.90      0.95      0.92     10658
-           1       0.32      0.19      0.24      1409
+|Class|Precision|Recall|F1-Score|
+|-----|---------|------|--------|
+|0|0.90|9.95|0.92|
+|1|0.32|0.19|0.24|
+|accuracy| | | 0.86|
+|macro avg|0.61|0.57|0.58|
+|weighted avg|0.83|0.86|0.84
 
-    accuracy                           0.86     12067
-   macro avg       0.61      0.57      0.58     12067
-weighted avg       0.83      0.86      0.84     12067
 
 
 
