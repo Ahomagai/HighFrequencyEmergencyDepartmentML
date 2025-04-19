@@ -31,13 +31,13 @@ The following figures show the data pipeline, cohort selection, and feature tabl
 
 
 
-### Highlights 
+## Highlights 
 
 #### Initial XGBOOST Model Performance without hyperparameter optimization
 
 With an mean ROC of 0.72, it's unsurprising that the model has relatively poor performance, especially for the main variables of precision, recall, and F1 Score.
 
-<b></br>
+<br></br>
 
 ![Alt text](https://github.com/Ahomagai/HighFrequencyEmergencyDepartmentML/blob/main/img/initial_ROC.png)
 
@@ -85,11 +85,13 @@ The classification report for optimized manual grid search XGBOOST model is as f
 We've got a substantial improvement in recall in our minority class (0.19 -> 0.64) and a good jump in f1 score, from 0.24 to 0.35. While there are marked improvements in class 1 Recall and F1 Scores, we see an overall decrease in accuracy, even in our class 0 identification. This is probably due to how we've tried to optimize for 'auroc' so the model optimized for this metric. Next steps should look at randomizedSearch instead of manual grid search and see if we can improve our model performance.
 
 But before we do that lets just take a peek at the feature importances and see what's driving our model performance so far.
+
 #### Feature Importance of Manual Grid Search XGBOOST model 
 
-This should make sense intituitively, what a patient presents to the ED with (ICD9 code), their age, their specific diagnosis, and finally WHERE they get discharged TO all play the biggest role in determining whether a specific user may be a high frequency user of the ED. 
+<p> This should make sense intituitively, what a patient presents to the ED with (ICD9 code), their age, their specific diagnosis, and finally WHERE they get discharged TO all play the biggest role in determining whether a specific user may be a high frequency user of the ED. 
 
-Interestingly, their vital signs, like Blood Pressure, Heart Rate, Respiratory rate, and how many different types of issues they're presenting with don't play a large role in the model importance.
+Interestingly, their vital signs, like Blood Pressure, Heart Rate, Respiratory rate, and how many different types of issues they're presenting with don't play a large role in the model importance. </p>
+
 
 <br></br>
 
@@ -98,6 +100,8 @@ Interestingly, their vital signs, like Blood Pressure, Heart Rate, Respiratory r
 
 
 #### More highlights to come as I finalize them 
+
+<br><br><br><br>
 
 
 ### References 
