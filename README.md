@@ -44,20 +44,48 @@ The following figures show the data pipeline, cohort selection, and feature tabl
 
 |Class|Precision|Recall|F1-Score|
 |-----|---------|------|--------|
-|0|0.90|9.95|0.92|
+|0|0.90|0.95|0.92|
 |1|0.32|0.19|0.24|
 |accuracy| | | 0.86|
 |macro avg|0.61|0.57|0.58|
 |weighted avg|0.83|0.86|0.84
 
-
-
-
+<br></br>
 
 #### XGBOOST Model Performance with manual grid search 
+<p> With an mean ROC of 0.76, there is some improvement in recall, and F1 Score in the optimized XGBOOST but the recall score takes a hit. </p>
+
+<b></br>
 ![Alt text](https://github.com/Ahomagai/HighFrequencyEmergencyDepartmentML/blob/main/img/ROC.png)
 
+<p> The following shows the hyperparameter optimizations for each step and it's influence on AUC. We see marked improvements after step 3 but a decline in 5, and 6. </p>
+![Alt text](https://github.com/Ahomagai/HighFrequencyEmergencyDepartmentML/blob/main/img/optimization.png)
+
+<br></br>
+<p> The classification report for optimized manual grid search XGBOOST model is as follows: </p>
+
+|Class|Precision|Recall|F1-Score|
+|-----|---------|------|--------|
+|0|0.94|0.74|0.83|
+|1|0.24|0.64|0.35|
+|accuracy| | | 0.72|
+|macro avg|0.59|0.69|0.59|
+|weighted avg|0.86|0.72|0.77|
+
+<br></br>
+
+<p> We've got a substantial improvement in recall in our minority class (0.19 -> 0.64) and a good jump in f1 score, from 0.24 to 0.35. While there are marked improvements in class 1 Recall and F1 Scores, we see an overall decrease in accuracy, even in our class 0 identification. This is probably due to how we've tried to optimize for 'auroc' so the model optimized for this metric. Next steps should look at randomizedSearch instead of manual grid search and see if we can improve our model performance.
+
+But before we do that lets just take a peek at the feature importances and see what's driving our model performance so far. </p>
+
 #### Feature Importance of Manual Grid Search XGBOOST model 
+
+<p>This should make sense intituitively, what a patient presents to the ED with (ICD9 code), their age, their specific diagnosis, and finally WHERE they get discharged TO all play the biggest role in determining whether a specific user may be a high frequency user of the ED. 
+
+Interestingly, their vital signs, like Blood Pressure, Heart Rate, Respiratory rate, and how many different types of issues they're presenting with don't play a large role in the model importance. </p>
+
+<br></br>
+
 ![Alt text](https://github.com/Ahomagai/HighFrequencyEmergencyDepartmentML/blob/main/img/Feature_importance.png)
 
 
