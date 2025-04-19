@@ -106,7 +106,9 @@ Interestingly, their vital signs, like Blood Pressure, Heart Rate, Respiratory r
 
 ### References 
 Hunt, K. A., Weber, E. J., Showstack, J. A., Colby, D. C., & Callaham, M. L. (2006). Characteristics of frequent users of emergency departments. Annals of Emergency Medicine, 48(1), 1–8. https://doi.org/10.1016/j.annemergmed.2005.12.030
+<br></br>
 LaCalle, E., & Rabin, E. (2010). Frequent users of emergency departments: The myths, the data, and the policy implications. Annals of Emergency Medicine, 56(1), 42–48. https://doi.org/10.1016/j.annemergmed.2010.01.032
+<br></br>
 Moe, J., Kirkland, S., Ospina, M. B., Campbell, S., Long, R., Davidson, A., Duke, P., Tamura, T., Trahan, L., & Rowe, B. H. (2016). Mortality, admission rates and outpatient use among frequent users of emergency departments: A systematic review. Emergency Medicine Journal: EMJ, 33(3), 230–236. https://doi.org/10.1136/emermed-2014-204496
 
 
