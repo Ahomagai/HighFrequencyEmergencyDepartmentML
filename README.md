@@ -82,7 +82,9 @@ The classification report for optimized manual grid search XGBOOST model is as f
 
 <br></br>
 
-We've got a substantial improvement in recall in our minority class (0.19 -> 0.64) and a good jump in f1 score, from 0.24 to 0.35. While there are marked improvements in class 1 Recall and F1 Scores, we see an overall decrease in accuracy, even in our class 0 identification. This is probably due to how we've tried to optimize for 'auroc' so the model optimized for this metric. Next steps should look at randomizedSearch instead of manual grid search and see if we can improve our model performance.
+We've got a substantial improvement in recall in our minority class (0.19 -> 0.64) and a good jump in f1 score, from 0.24 to 0.35. While there are marked improvements in class 1 Recall and F1 Scores, we see an overall decrease in accuracy, even in our class 0 identification. This is probably due to how we've tried to optimize for 'auroc' so the model optimized for this metric. We're probably also running into over-fitting here (high variance, poor variance/bias trade-off) with our model so I should also look at trying to prune the features down or look at other ways to make generalization better. 
+
+Next steps should look at randomizedSearch instead of manual grid search and see if we can improve our model performance, and try to look at what features are useful to further look at and which ones we can drop.
 
 But before we do that lets just take a peek at the feature importances and see what's driving our model performance so far.
 
